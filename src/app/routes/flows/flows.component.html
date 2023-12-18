@@ -1,0 +1,38 @@
+<app-table-header
+  [title]="'Logs'"
+></app-table-header>
+<nz-table *ngIf="tableData"
+          [nzData]="tableData.items"
+          [nzPageSize]="tableData.summary.per_page"
+          [nzPageIndex]="tableData.summary.page"
+          [nzFrontPagination]="false"
+          [nzPageSizeOptions]="[5, 10, 20, 50]"
+          [nzShowSizeChanger]="true"
+          [nzLoading]="loading"
+          (nzQueryParams)="onParamsChange($event)"
+          [nzScroll]="{ y: mediator.tableHeight + 'px' }"
+          [nzTotal]="tableData.summary.total_items">
+  <thead>
+  <tr>
+    <th *ngFor="let column of tableData.columns; let i = index"
+        [nzWidth]="i < tableData.columns.length - 1 ? column.width : null" nzEllipsis>
+      <div class="ellipsis">{{column.title}}</div>
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let data of tableData.items">
+    <ng-container *ngFor="let column of tableData.columns">
+      <td class="ellipsis"
+          *ngIf="column.type !== 'image'">{{data[column.name]}}</td>
+      <td *ngIf="column.type === 'image'">
+        <nz-avatar [nzText]="data['initials']" *ngIf="!data[column.name]"></nz-avatar>
+        <nz-avatar nzIcon="user"
+                   [nzSrc]="data[column.name]"
+                   *ngIf="data[column.name]">
+        </nz-avatar>
+      </td>
+    </ng-container>
+  </tr>
+  </tbody>
+</nz-table>

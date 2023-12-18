@@ -1,0 +1,66 @@
+header {
+  background: var(--light-background, #FFF);
+  box-shadow: 0px -1px 0px 0px #F0F0F0 inset;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 66px;
+  margin: 0 1rem;
+  .header__left {
+    .header__left-logo {
+
+      cursor: pointer;
+      margin-right: 1rem;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 140%;
+      padding-top: 8px;
+      font-family: Source Code Pro;
+    }
+    .header__left-routes {
+      font-size: 14px;
+      line-height: 22px;
+      .header__left-button {
+        padding: 10px 16px;
+      }
+    }
+  }
+  .sync-btn {
+    margin-right: 1rem;
+  }
+
+  input {
+    margin-right: 1rem;
+  }
+}
+.nav__link__active {
+  color: #0099E3;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #0099E3;
+}
+.dashbarod__wrapper {
+  margin: 24px 0 24px 24px;
+  .dashbarod__wrapper-card {
+    text-align: center;
+    margin-right: 24px;
+    flex: 1;
+    border-radius: 2px;
+    border: 1px solid #0099E3;
+    height: 89px;
+    padding: 0px 24px;
+    .dashbarod__wrapper-text {
+      margin-top: 15px;
+      color: rgba(0, 0, 0, 0.45);
+      font-size: 14px;
+      line-height: 22px;
+    }
+    .dashbarod__wrapper-number {
+      margin-top: 10px;
+      color: #0099E3;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 28px;
+    }
+  }
+}
+

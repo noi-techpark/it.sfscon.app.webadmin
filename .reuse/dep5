@@ -1,0 +1,10 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: OpenCON
+Upstream-Contact: DigitalCUBE <info@digitalcube.rs>
+Source: https://m.opencon.dev/
+
+
+Files: src/** .browserslistrc .editorconfig README.md *.json *.js .gitignore
+Copyright: 2023 DigitalCUBE <info@digitalcube.rs>
+License: GPL-3.0-or-later
+

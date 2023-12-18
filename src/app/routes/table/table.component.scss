@@ -1,0 +1,16 @@
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ant-table-tbody > tr > td {
+  height: 65px !important;
+}
+.table-row-data {
+  cursor: pointer;
+}
+.qr-code {
+  margin-right: 0.5rem;
+}
