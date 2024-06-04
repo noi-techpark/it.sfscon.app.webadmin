@@ -4,7 +4,7 @@ Upstream-Contact: DigitalCUBE <info@digitalcube.rs>
 Source: https://m.opencon.dev/
 
 
-Files: src/** .browserslistrc .editorconfig README.md *.json *.js .gitignore
+Files: src/** .browserslistrc .editorconfig README.md *.json *.js .gitignore .github/workflows/*.yml
 Copyright: 2023 DigitalCUBE <info@digitalcube.rs>
 License: GPL-3.0-or-later
 
