@@ -23,22 +23,9 @@ jobs:
       - name: Change proxy.config.js
         run: sed -i -e "s;http://localhost:8000;${{env.SFSCON_BACKEND_URL}};g" proxy.config.js
 
-      # - uses: noi-techpark/github-actions/npm-build@v2
-      #   with:
-      #     node-version: ${{ env.NODE_VERSION }}
-
-      - name: Set up Node
-        uses: actions/setup-node@v4
+      - uses: noi-techpark/github-actions/npm-build@v2
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build code
-        run: npm run build
-
 
       - name: Sync to S3 bucket
         uses: noi-techpark/github-actions/aws-s3-bucket-sync@v2
