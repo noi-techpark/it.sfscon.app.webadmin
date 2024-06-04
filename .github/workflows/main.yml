@@ -5,7 +5,7 @@ on:
   pull_request:
 
 env:
-  NODE_VERSION: 18.x
+  NODE_VERSION: 20.x
   AWS_REGION: "eu-west-1"
 
 jobs:
@@ -25,8 +25,8 @@ jobs:
 
       - uses: noi-techpark/github-actions/npm-build@v2
         with:
-          build-command: npm run build
           node-version: ${{ env.NODE_VERSION }}
+          working-directory: .
 
       - name: Sync to S3 bucket
         uses: noi-techpark/github-actions/aws-s3-bucket-sync@v2
