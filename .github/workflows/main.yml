@@ -5,7 +5,7 @@ on:
   pull_request:
 
 env:
-  NODE_VERSION: 21.x
+  NODE_VERSION: 20.x
   AWS_REGION: "eu-west-1"
 
 jobs:
