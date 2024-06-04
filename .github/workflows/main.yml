@@ -18,13 +18,14 @@ jobs:
       SFSCON_BACKEND_URL: "https://backend.app.sfscon.testingmachine.eu"
     steps:
       - name: Checkout source code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Change proxy.config.js
         run: sed -i -e "s;http://localhost:8000;${{env.SFSCON_BACKEND_URL}};g" proxy.config.js
 
       - uses: noi-techpark/github-actions/npm-build@v2
         with:
+          build-command: npm run build
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Sync to S3 bucket
