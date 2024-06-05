@@ -17,6 +17,7 @@ jobs:
     env:
       AWS_S3_BUCKET_NAME: "it.sfscon.app.webadmin.test"
       SERVER_PORT: 1096
+      DOCKER_TAG: ${{ github.sha }}-test
     steps:
       - name: Checkout source code
         uses: actions/checkout@v4
