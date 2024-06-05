@@ -15,7 +15,6 @@ jobs:
     if: github.ref == 'refs/heads/main'
     concurrency: deploy-test
     env:
-      AWS_S3_BUCKET_NAME: "it.sfscon.app.webadmin.test"
       SERVER_PORT: 1096
       DOCKER_TAG: ${{ github.sha }}-test
     steps:
