@@ -1,7 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-@import "assets/scss/main";
-.talks-table {
-  .ant-table-placeholder {
-    display: none;
-  }
+@import './shared/styles/overrides/pagination.scss';
+
+body {
+    font-family: sans-serif, Arial, Helvetica;
 }
