@@ -47,5 +47,4 @@ testem.log
 Thumbs.db
 
 .angular
-package-lock.json
 proxy.conf.json
